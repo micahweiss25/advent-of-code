@@ -1,0 +1,22 @@
+make a object of every layer
+since it's a feed forward network
+
+compute the activations for one layer
+and then pass it on to the next layer
+
+how you connect the layers
+is your weights
+
+the biases are 
+
+the initial layer has
+no weights or biases
+
+input_size is either 
+manually assigned
+or assumed from the 
+last layer's size
+
+if the input size is 10,
+the node should have
+10 addition
