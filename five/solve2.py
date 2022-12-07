@@ -1,13 +1,10 @@
 from pathlib import Path
 import re
 
-steps = Path("input1.txt").read_text().split("\n") # steps
-crates = Path("input2.txt").read_text().split("\n") # stack config
-
 # create stacks
 # first in first out
 lol = [[] for x in range(0, 9)]
-for line in crates[:-1]:
+for line in Path("input2.txt").read_text().split("\n")[:-1]:
     index = 1
     while index < len(line):
         if line[index] != " ":
@@ -15,7 +12,7 @@ for line in crates[:-1]:
         index += 4
     
 
-for line in steps:
+for line in Path("input1.txt").read_text().split("\n"):
     z = re.match(r"[a-z ]+([0-9]+)[a-z ]+([0-9]+)[a-z ]+([0-9]+)", line)
     print(f"move {z.group(1)} from {z.group(2)} to {z.group(3)}")
     count = 0
